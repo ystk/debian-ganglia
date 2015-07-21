@@ -1,3 +1,13 @@
+ganglia (3.1.7-1+squeeze1) stable-security; urgency=high
+
+  * Non-maintainer upload.
+  * Fix for path traversal issue when supplying name of a graph
+    web/graph.php: Check for path traversal issues by making sure real path
+    is actually in graphdir. Fixes CVE-2012-3448.
+    Fix backported from ganglia 3.1.8. (Closes: #683584)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 19 Jan 2013 10:04:17 +0100
+
 ganglia (3.1.7-1) unstable; urgency=low
 
   * New upstream version. Closes: #584276. 
