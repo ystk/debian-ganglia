@@ -1,0 +1,17 @@
+diff --git a/gmond/gmond.service.in b/gmond/gmond.service.in
+new file mode 100644
+index 0000000..3fd136b
+--- /dev/null
++++ b/gmond/gmond.service.in
+@@ -0,0 +1,11 @@
++[Unit]
++Description=Ganglia Monitor Daemon
++After=network.target
++
++[Service]
++Type=forking
++PIDFile=@runstatedir@/gmond.pid
++ExecStart=@sbindir@/gmond --pid-file=@runstatedir@/gmond.pid
++
++[Install]
++WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+diff --git a/gmetad/gmetad.service.in b/gmetad/gmetad.service.in
+new file mode 100644
+index 0000000..8234e90
+--- /dev/null
++++ b/gmetad/gmetad.service.in
+@@ -0,0 +1,12 @@
++[Unit]
++Description=Ganglia Meta Daemon
++After=network.target
++
++[Service]
++Type=forking
++PIDFile=@runstatedir@/gmetad.pid
++ExecStart=@sbindir@/gmetad --pid-file=@runstatedir@/gmetad.pid
++EnvironmentFile=-@envdir@/gmetad
++
++[Install]
++WantedBy=multi-user.target
